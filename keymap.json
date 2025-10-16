@@ -1,0 +1,94 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+      "alt-space f f": "file_finder::Toggle",
+      "alt-space b b": "tab_switcher::ToggleAll",
+      "alt-space c j": "project_symbols::Toggle",
+      "alt-space c x": "diagnostics::DeployCurrentFile",
+      "alt-space c shift-x": "diagnostics::Deploy",
+      "alt-space s i": "outline::Toggle",
+
+      "alt-space shift-k": "pane::CloseActiveItem",
+      "alt-space o t": "terminal_panel::Toggle",
+      "alt-space o o": "outline_panel::ToggleFocus",
+      "alt-space o e": "vim::ToggleProjectPanelFocus",
+      "alt-space o w": "editor::ToggleFocus",
+      "alt-space o a": "agent::ToggleFocus",
+
+      "alt-space a k": "agent::Keep",
+      "alt-space a shift-k": "agent::KeepAll",
+      "alt-space a shift-R": "agent::RejectAll",
+      "alt-space a r": "agent::RejectOnce",
+      "alt-space a c": "agent::Reject",
+      "alt-space a a": "agent::AllowOnce",
+      "alt-space a shift-a": "agent::AllowAlways",
+
+      "alt-space v =": "editor::ExpandAllDiffHunks",
+      "alt-space v +": "git::Pull",
+      "alt-space v D": "git::Diff",
+      "alt-space v d": "git_panel::ToggleFocus",
+      "alt-space v v": "git::Commit",
+      "alt-space v g": "git::Blame",
+      "alt-space v ]": "editor::GoToHunk",
+      "alt-space v [": "editor::GoToPreviousHunk",
+      "alt-space v P": "git::Push",
+      "alt-space v b s": "git::Branch",
+      "alt-space v s t": "git::ToggleStaged",
+      "alt-space v s s": "git::StageAll",
+      "alt-space v s shift-s": "git::UnstageAll",
+      "alt-space v s n": "git::StageAndNext",
+      "alt-space v s N": "git::UnstageAndNext",
+      "alt-space s p": "pane::DeploySearch",
+      "ctrl-s": "buffer_search::Deploy",
+      "alt-x": "command_palette::Toggle",
+      "alt-g g": [
+        "task::Spawn",
+        {
+          "task_name": "start lazygit",
+          "reveal_target": "center"
+        }
+      ],
+      "alt-g j": [
+        "task::Spawn",
+        {
+          "task_name": "start jjui",
+          "reveal_target": "center"
+        }
+      ]
+    }
+  },
+  {
+    "context": "Dock",
+    "bindings": {
+      "alt-space shift-k": "workspace::CloseActiveDock"
+    }
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "alt-space n a": "agent::ToggleNewThreadMenu"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "ctrl-n": "vim::Down",
+      "ctrl-p": "vim::Up"
+    }
+  }
+]
